@@ -63,4 +63,17 @@ Update Complete. ⎈ Happy Helming!⎈
 cstark@cstark ~]$ helm3 install stable/prometheus --generate-name
 Error: Kubernetes cluster unreachable
 
+# create local chart 
+helm3 create hello-helm3
+# Take a close look at the generated Chart.yaml it explicitly specifies the type as Application. If you want to create a reusable Library Chart, you have to change the type setting to library and remove the templates.
+
+# create two sample namespace
+kubectl create namspace helm3-ns1
+kubectl create namespace helm3-ns2
+
+kubectl get ns | grep helm3
+
+
+
+
 
