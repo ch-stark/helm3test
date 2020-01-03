@@ -136,3 +136,7 @@ NOTES:
   kubectl --namespace default port-forward $POD_NAME 8080:80
 [cstark@cstark helm3test]$
 
+
+#good to know
+https://github.com/fluxcd/helm-operator/blob/master/docs/references/helmrelease-custom-resource.md#using-a-chart-from-a-git-repo-instead-of-a-helm-repo
+
