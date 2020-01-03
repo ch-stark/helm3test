@@ -104,3 +104,9 @@ kind: ConfigMap
 metadata:
   name: nginx-config
 HELM
+
+
+https://github.com/ch-stark/helm/tree/master/cmd/helm/testdata/testcharts/alpine
+
+
+
