@@ -75,7 +75,7 @@ kubectl get ns | grep helm3
 
 
 # Having the namspaces in place, use helm3 install to install the previously created Chart to both namespaces.
-
+# https://thorsten-hans.com/the-state-of-helm3-hands-on
 cd ~/dev
 
 helm3 install sample-deployment hello-helm3 -n helm3-ns1
