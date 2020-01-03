@@ -49,3 +49,6 @@ version.BuildInfo{Version:"v3.0.2", GitCommit:"19e47ee3283ae98139d98460de796c1be
 [cstark@cstark ~]$ 
 
 
+# add helm3 repo
+helm3 repo add stable https://kubernetes-charts.storage.googleapis.com/
+
