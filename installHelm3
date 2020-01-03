@@ -71,6 +71,10 @@ helm3 create hello-helm3
 kubectl create namspace helm3-ns1
 kubectl create namespace helm3-ns2
 
+
+helm repo add starkiinformatik https://ch-stark.github.io/helm-charts/
+
+
 kubectl get ns | grep helm3
 
 
