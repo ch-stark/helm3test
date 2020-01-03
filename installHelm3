@@ -52,3 +52,15 @@ version.BuildInfo{Version:"v3.0.2", GitCommit:"19e47ee3283ae98139d98460de796c1be
 # add helm3 repo
 helm3 repo add stable https://kubernetes-charts.storage.googleapis.com/
 
+# update helm3 repo
+[cstark@cstark ~]$ helm3 repo update
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "stable" chart repository
+Update Complete. ⎈ Happy Helming!⎈ 
+
+
+# install application
+cstark@cstark ~]$ helm3 install stable/prometheus --generate-name
+Error: Kubernetes cluster unreachable
+
+
