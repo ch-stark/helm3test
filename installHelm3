@@ -41,3 +41,11 @@ echo "alias helm3=/usr/local/bin/tmp/helm" >> ~/.bashrc
 # cleanup
 rm -rf $helmVersion
 rm -rf linux-amd64
+
+
+# verify
+[cstark@cstark ~]$ helm3 version
+version.BuildInfo{Version:"v3.0.2", GitCommit:"19e47ee3283ae98139d98460de796c1be1e3975f", GitTreeState:"clean", GoVersion:"go1.13.5"}
+[cstark@cstark ~]$ 
+
+
