@@ -33,7 +33,7 @@ mv darwin-amd64/helm /usr/local/bin/tmp/helm
 export HELM_HOME=/usr/local/bin/tmp/helm3
 
 #set temp alias
-h3=/usr/local/bin/tmp/helm
+helm3=/usr/local/bin/tmp/helm
 
 #add alias to .bashrc
 echo "alias helm3=/usr/local/bin/tmp/helm" >> ~/.bashrc
