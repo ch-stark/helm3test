@@ -1,0 +1,32 @@
+set -eou pipefail
+
+#set helm version
+#https://computingforgeeks.com/install-and-use-helm-2-on-kubernetes-cluster/
+
+helmVersion=helm-v2.16.1-linux-amd64.tar.gz
+#download helm version
+wget https://get.helm.sh/$helmVersion
+tar xvzf $helmVersion
+
+#mv helm2 binary to local tmp folder
+if [[ -e /usr/local/bin/tmp/helm2 ]] ; then echo "tmp folder already exists" ; else sudo mkdir /usr/local/bin/tmp/helm2/ ; fi
+sudo mv linux-amd64/helm /usr/local/bin/tmp/helm2/
+
+#TEMPORARY export $HELM_HOME so you don't overwrite Helm2 ~/.helm/
+export HELM_HOME=/usr/local/bin/tmp/helm2/
+
+#set temp alias
+helm2=/usr/local/bin/tmp/helm2/helm
+
+#add alias to .bashrc
+echo "alias helm2=/usr/local/bin/tmp/helm2/helm" >> ~/.bashrc
+
+source ~/.bashrc
+
+# cleanup
+rm -rf $helmVersion
+rm -rf linux-amd64
+
+
+# verify
+helm2 version
