@@ -1,1 +1,30 @@
-# helm3test
+#  Helm 3 Basics with OpenShift
+
+We did not consider to use Helm 2 mainly for security reasons (Tiller) so we will just start with Helm 3.
+
+## How to install Helm3
+
+curl -L https://mirror.openshift.com/pub/openshift-v4/clients/helm/latest/helm-linux-amd64
+-o /usr/local/bin/helmoc
+
+
+#TEMPORARY export $HELM_HOME so you don't overwrite Helm2 ~/.helm/
+export HELM_HOME=/usr/local/bin/tmp/helmoc
+
+#set temp alias
+helmoc=/usr/local/bin/tmp/helmoc
+
+#add alias to .bashrc
+echo "alias helmoc=/usr/local/bin/helmoc" >> ~/.bashrc
+source ~/.bashrc
+
+# cleanup
+rm -rf $helmVersion
+rm -rf linux-amd64
+~~~
+
+check/verify the version
+
+~~~sh 
+helmoc version
+~~~
